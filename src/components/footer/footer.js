@@ -6,7 +6,7 @@ import './footer.scss'
 const Footer = (props) => {
   return (
     <div className="appFooter">
-      <div className="container"><span className="text-muted">Footer here</span></div>
+      <span className="text-muted">Gallereasy POC web app</span>
     </div>
   )
 }

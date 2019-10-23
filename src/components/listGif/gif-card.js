@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import heart from '../../assets/images/heart.png'
 import './gif-card.scss'
 
@@ -18,9 +19,10 @@ class GifCard extends Component {
     }
     renderGif = (data, isFavourited) => {
         const { images, id } = data
+        console.log(images)
         return (
             <div className="image-block" onClick={() => this.handleClick(id)}>
-                {!!images.original && <img src={images.original.url} alt='trending gif'/>}
+                {!!images.fixed_height && <img src={images.fixed_height.url} alt='trending gif'/>}
                { isFavourited?  <img className="icon" src={heart} alt="Heart"/>: null}
             </div>
         )
@@ -43,10 +45,14 @@ class GifCard extends Component {
         if(!data){
             return null
         }
+        const { images, id } = data
         return (
             <div className="gif-block-wrapper col-lg-3 col-md-4 col-6">
-                <div className="gif-block">
-                    {this.renderGif(data, isFavourited)}
+                <div className="gif-block" >
+                    <div className={classNames('image-block', { 'liked': isFavourited })} onClick={() => this.handleClick(id)}>
+                        {!!images.fixed_height && <img src={images.fixed_height.url} alt='trending gif'/>}
+                        <img className="icon" src={heart} alt="Heart"/>
+                    </div>
                 </div>
             </div>
         )

@@ -7,8 +7,8 @@ import { rootReducer } from './root-reducer'
 import { configureStore } from './configureStore'
 import { sagas } from './sagas'
 import './assets/styles/custom.scss'
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
+import 'react-app-polyfill/ie11'
+import 'react-app-polyfill/stable'
 
 const { store, history } = configureStore(rootReducer, sagas)
 
