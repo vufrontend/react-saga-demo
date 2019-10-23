@@ -1,0 +1,10 @@
+{
+  "default": "An unknown error code occured. This could be a problem with your internet connection. Please try again later",
+  "bad-credential": "The email address and/or password are invalid. Please check your details and try again.",
+  "not-authenticated": "You're not logged in yet",
+  "InvalidFormat": "Could not read file. Please check the format and try again.",
+  "expired-token": "Your session has expired, please login again",
+  "invalid-token": "Your session has expired, please login again",
+  "invalid-authentication": "Your session has expired, please login again",
+  "wrong-old-password": "Your current password is invalid"
+}

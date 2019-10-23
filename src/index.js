@@ -1,12 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { App } from './app'
+import { rootReducer } from './root-reducer'
+import { configureStore } from './configureStore'
+import { sagas } from './sagas'
+import './assets/styles/custom.scss'
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const { store, history } = configureStore(rootReducer, sagas)
+
+const render = (Component) => {
+  const root = document.getElementById('root')
+
+  /* istanbul ignore next */
+  if (root) {
+    ReactDOM.render(
+      <AppContainer>
+        <Component store={store} history={history} />
+      </AppContainer>,
+      root,
+    )
+  }
+}
+
+render(App)
+
+if (module.hot) {
+  module.hot.accept('./app', () => render(App))
+}

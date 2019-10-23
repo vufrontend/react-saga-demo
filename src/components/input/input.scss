@@ -1,0 +1,9 @@
+@import '../../assets/styles/variables.scss';
+
+.custom-input {
+  border: 0;
+  border-bottom: 1px solid $gray;
+  color: $grayLight;
+  font-size: 40px;
+  width: 100%;
+}

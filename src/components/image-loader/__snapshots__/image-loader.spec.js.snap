@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageLoader Renders default 1`] = `
+<Spin
+  className=""
+  indicator={
+    <Icon
+      spin={true}
+      type="loading"
+    />
+  }
+  prefixCls="ant-spin"
+  size="default"
+  spinning={true}
+  wrapperClassName=""
+/>
+`

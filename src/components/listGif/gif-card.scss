@@ -1,0 +1,40 @@
+@import '../../assets/styles/variables.scss';
+
+.gif-block-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    .gif-block {
+        background-color: white;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: -1px 1px 5px 0px rgba(50, 50, 50, 0.3);
+        -moz-box-shadow:    -1px 1px 5px 0px rgba(50, 50, 50, 0.3);
+        box-shadow:         -1px 1px 5px 0px rgba(50, 50, 50, 0.3);
+        padding: 10px;
+        .image-block {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            background-image:url('../../assets//images/gif_blank.png');
+            background-repeat: no-repeat;
+            background-position: center; 
+            background-color: $card-block-bg;
+            height: calc(50vw - 50px);
+            cursor: pointer;
+        // @include md {
+        //     height: calc(33vw - 50px);
+        // }
+        // @include lg {
+        //     height: calc(25vw - 50px);
+        // }
+            .icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -32px;
+            }
+        }
+    }
+}
+
