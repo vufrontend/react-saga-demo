@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## I just spent few hours to do this. There are some things could be improve:
+1. Update all unit tests
+2. Enhance the CSS layout of the list images
+3. Code spliting 
+4. Server rendering
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
